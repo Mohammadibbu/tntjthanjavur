@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>add dhayi names</title>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+	<link rel="stylesheet" type="text/css" href="tntjthanjavur.css">
+</head>
+<body >
+
+  	<center>
+	<h1>ADD DHAYI NAMES</h1>
+	<h3>Total no. of names : <span id="total"></span></h3>
+	<fieldset>
+		<form id="form">
+			<label>Enter dhayi name  :</label><input type="text" name="dhayi_name" id="name">
+			<input type="submit" value="add" name="" id="add" onclick="validate()">
+	<button onclick="history.back()">Back</button>
+			
+		</form>
+	</fieldset>
+	<section>
+		<table border="2">
+			<thead style="font-weight: bolder;">
+				<tr>
+				<td>S.No</td>
+				<td>Dhayi Names</td>
+				<td >options</td>
+			</tr>
+			<div id="fetch">Fetching...</div>
+			</thead>
+		<tbody id="tableBody">
+			
+		</tbody>
+	</section>
+  </center>
+  <script type="text/javascript" src="jummah.js"></script>
+</body>
+
+</html>
