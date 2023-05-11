@@ -34,10 +34,10 @@ const save= (name,datetime)=>{
   });
   };
 if(name.value===""){
-  alert("please enter dhayi name")}
+  alert("Please Enter Dhayi Name")}
 else{
 
- let pwd=prompt("Please Enter Password To add dhayiname");
+ let pwd=prompt("Please Enter Password To Add dhayiName");
       //confirmation password
       if (pwd!= "tntj"){
         
@@ -45,17 +45,24 @@ else{
           validate();
         }else{
           alert("If You Want To Add dhayiname,Please Enter The Correct Password...");
+          name.value='';
         }
         
       }else{
         alert("_AUTHENTICATED SUCCESSFULLY_✔️")
        save(name,datetime);
-       alert("Added successfully....")
+       setTimeout(()=>{alert("Added successfully....")},500);
+
+       document.getElementById('added_message').style.display="block";
+       setTimeout(()=>{document.getElementById('added_message').style.display = "none" ;},3000);
 
        name.value='';}
      }
    }
-
+  //      document.getElementById('added_message').style.display="block";
+  //     setTimeout(()=>{document.getElementById('added_message').style.display = "none" ;},4500);
+  // save(name,datetime);
+  // name.value='';}}
 
 //read data in database(firebase)
 contactformDB.on('value',(snapshot)=>{
@@ -67,7 +74,7 @@ contactformDB.on('value',(snapshot)=>{
     document.getElementById("fetch").style.display="none";
      table.innerHTML +=`<tr>
      <td>${i}</td><td>${uservalue.dhayiname}</td>
-     <td><button type="submit" onclick="removeData('${this.key}')">del</button></td>
+     <td onclick="removeData('${this.key}')" id="del_btn">Delete
      </tr>`;
  document.getElementById("total").innerHTML=i;
 
@@ -103,9 +110,18 @@ contactformDB.on('value',(snapshot)=>{
 //  }
 // console.log(table)
 function removeData(key){
-    console.log()
-  
+       if (confirm("Do You Want To Delete?")) {
+         navigator.vibrate([50,100,50]);
+       setTimeout(()=>{alert("Deleted Successfully...")},500);
 
-   firebase.database().ref('DHAYINAMES/'+key).remove();
-   return false;
-  }
+         
+          document.getElementById('delete_message').style.display="block";
+         setTimeout(()=>{document.getElementById('delete_message').style.display = "none" ;},4500);
+           firebase.database().ref('DHAYINAMES/'+key).remove();
+           return false;
+          
+        }else{
+          // else part
+        }
+
+}
