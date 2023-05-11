@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
-<meta name="viewport" content="width=1024">
+<meta name="viewport" content="width=670, user-scalable=no">
 <title>Jummah chart</title>
 <!--  login page loading style -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -16,13 +16,39 @@
 <link href="https://fonts.googleapis.com/css2?family=Tiro+Tamil:ital@1&display=swap" rel="stylesheet">
 
 <!-- <link href="https://fonts.googleapis.com/css2?family=Coiny&display=swap" rel="stylesheet"> -->
+<link rel="stylesheet" type="text/css" href="tntjthanjavur.css">
 
 <link href="https://fonts.googleapis.com/css2?family=Arima:wght@700&display=swap" rel="stylesheet">
 <!-- style for whole page -->
 	<link rel="stylesheet" type="text/css" href="loginpage.css">
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
-</head>
+
+   <!-- <meta name="viewport" content="width=device-width,initial-scale=1, user-scalable=no"> -->
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	</head>
 <body onoffline="offline()" ononline="online()">
+        <div class="responsive-bar">
+        <div class="logo">
+            <img src="tntjlogo.png" alt="logo"/>
+            </div>
+            <div class="menu">
+            <h4>Menu</h4>
+            </div>
+        </div>
+		<nav>
+            <div class="logo">
+            <img src="tntjlogo.png" alt="logo"/>
+            </div>
+         <ul>
+            <li><a href="#content" >Home</a></li>
+             <!-- <li><a href="#">About us</a></li> -->
+             <!-- <li><a href="#">Portfolio</a></li> -->
+             <li id="dhayilistlink" style="display:none;"><a href="Dhayilist.html" >Dhayikal List</a></li>
+             <li><a href="mailto:ithris615@yahoo.com" onclick="alert('Opening gmail or email')">Contact Us</a></li>
+            </ul>
+        </nav>
+     
  
 	<!-- loginpage -->
 	<div class="container" id="form_container">
@@ -54,6 +80,22 @@
 </div>
 <script type="text/javascript" src="script.js">
 	//login authentication and javascript content
+</script>
+<script type="text/javascript">
+	$(window).on('scroll',function(){
+            if($(window).scrollTop()){
+                $('nav').addClass('black');
+            }
+            else{
+                $('nav').removeClass('black');
+            }
+        })
+  /*menu button onclick function*/         $(document).ready(function(){
+                $('.menu h4').click(function(){
+                    $("nav ul").toggleClass("active")
+            })
+            })
+ 
 </script>
 <!-- table -->
 <div id="offline"><i class="fa fa-warning"></i>  No Network Connection !</div>
