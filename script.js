@@ -75,7 +75,7 @@ $('select').not(this).find('option[value="'+prevValue+'"]').removeAttr('disabled
   
  
  // page preventDefault 
- // document.getElementById("submitbtn").addEventListener("click",function(event){event.preventDefault()});
+ document.getElementById("submitbtn").addEventListener("click",function(event){event.preventDefault()});
  // validate the form
  function validateloginpage() {
   let content_table=document.getElementById('content');
@@ -87,8 +87,8 @@ $('select').not(this).find('option[value="'+prevValue+'"]').removeAttr('disabled
    let pass_word=document.getElementById('password');
    let loginbtn=document.getElementById('submitbtn');
    // CHANGE HERE user name and pass word!
-   var admin= "";
-   var pass= "";
+   var admin= "admin";
+   var pass= "tntj";
   // check the user name and password...
   if (userName.value != admin || pass_word.value != pass ) {
     //vibrate
@@ -131,7 +131,6 @@ $('select').not(this).find('option[value="'+prevValue+'"]').removeAttr('disabled
         userName.style.outline= "2px solid green";
         pass_word.style.outline = "2px solid green";
         valid.style.display = "block";
-        document.getElementById('dhayilistbutton').style.display = "block";
          loginbtn.style.color ="white";
          loginbtn.style.background ="#29f013";
   
@@ -145,6 +144,8 @@ $('select').not(this).find('option[value="'+prevValue+'"]').removeAttr('disabled
         content_table.style.display = "block" ;
           btn_table.style.display = "block";
           loginpage.style.display= "none";
+        document.getElementById('dhayilistbutton').style.display = "block";
+
         }
       setTimeout(loginsuccess,1500);
   }
