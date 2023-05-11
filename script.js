@@ -145,6 +145,7 @@ $('select').not(this).find('option[value="'+prevValue+'"]').removeAttr('disabled
           btn_table.style.display = "block";
           loginpage.style.display= "none";
         document.getElementById('dhayilistbutton').style.display = "block";
+        document.getElementById('dhayilistlink').style.display = "block";
 
         }
       setTimeout(loginsuccess,1500);
@@ -247,7 +248,6 @@ function online(){
       var offline=document.getElementById('offline');
       offline.style.display="block";
     }
-
  
  
 
