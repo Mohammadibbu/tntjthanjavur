@@ -18,12 +18,11 @@ document.getElementById('form').addEventListener('submit',validate);
 
 document.getElementById("add").addEventListener("click",function(event){event.preventDefault()}); 
 const table=document.getElementById("tableBody");
-var datetime=new Date().toString(); 
 
  function validate() {
 
   // body...
-
+var datetime=new Date().toString();
 var name=document.getElementById('name');
 
 const save= (name,datetime)=>{
