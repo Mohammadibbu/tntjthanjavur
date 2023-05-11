@@ -74,7 +74,7 @@ contactformDB.on('value',(snapshot)=>{
     document.getElementById("fetch").style.display="none";
      table.innerHTML +=`<tr>
      <td>${i}</td><td>${uservalue.dhayiname}</td>
-     <td onclick="removeData('${this.key}')" id="del_btn">Delete
+     <td onclick="removeData('${this.key}','${this.uservalue.dhayiname}')" id="del_btn">Delete
      </tr>`;
  document.getElementById("total").innerHTML=i;
 
@@ -109,8 +109,9 @@ contactformDB.on('value',(snapshot)=>{
 //  return false;
 //  }
 // console.log(table)
-function removeData(key){
-       if (confirm("Do You Want To Delete?")) {
+function removeData(key,uservalue){
+      console.log()
+       if (confirm("Do You Want To Delete?"+"\n"+uservalue)) {
          navigator.vibrate([50,100,50]);
        setTimeout(()=>{alert("Deleted Successfully...")},500);
 
@@ -122,6 +123,9 @@ function removeData(key){
           
         }else{
           // else part
+       // console.log(table)
+
+
         }
 
 }
