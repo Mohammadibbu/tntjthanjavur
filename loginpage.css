@@ -20,8 +20,8 @@
 		}
 
          .container{
-			position: relative;
-			margin: 50px ;
+			position: absolute;
+			margin: 350px 270px 100px;
 			width: 485px;
 			height: 600px;
       background: #171713;
@@ -122,7 +122,7 @@
        	border-radius: 10px;
        	border: 2px solid #1e7d14;
        }
-#button,#button1{
+#button,#dhayilistbutton{
 	font-family: 'Arima', cursive;
   background-color: #4CAF50;
   border: 2px solid black;
@@ -183,10 +183,10 @@
 
 /*hide the content*/
 
-/*#content,#button,#button1{
+#content,#button,#dhayilistbutton{
   
   display: none;
- }*/
+ }
 		table{
 			font-family: 'Tiro Tamil', serif;
 			border-collapse: collapse;
@@ -232,7 +232,6 @@
 			padding:5px;
 			font-weight: bolder;
 			font-size: 90%;
-			width: 60%;
 			-webkit-appearance: none;
 			cursor: pointer;
 			font-family: 'Tiro Tamil', serif;
