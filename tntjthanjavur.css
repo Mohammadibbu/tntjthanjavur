@@ -47,6 +47,7 @@ fieldset{
       color: white;
       background-color: red;
       border: 2px solid black;
+       user-select: none;
 
 }
 #del_btn:hover{
@@ -68,6 +69,7 @@ button{
   font-size: 15px;
   margin: 4px 2px;
   cursor: pointer;
+  user-select: none;
 
 }button:hover{
    transition: .5s;
