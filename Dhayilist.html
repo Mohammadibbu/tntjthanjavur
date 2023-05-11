@@ -8,31 +8,32 @@
 	<link rel="stylesheet" type="text/css" href="tntjthanjavur.css">
 </head>
 <body >
-
   	<center>
-	<h1>ADD DHAYI NAMES</h1>
+	<h1> DHAYI NAME LIST</h1>
 	<h3>Total no. of names : <span id="total"></span></h3>
-	<fieldset>
+	<div id="added_message">Added successfully...</div>
+	<div id="delete_message">Deleted successfully...</div>
+	<fieldset >
 		<form id="form">
-			<label>Enter dhayi name  :</label><input type="text" name="dhayi_name" id="name">
-			<input type="submit" value="add" name="" id="add" onclick="validate()">
+			<label>Add dhayi name  </label><input type="text" name="dhayi_name" id="name"><br>
+			<button type="submit" value="add" name="" id="add" onclick="validate()">Add</button>
 	<button onclick="history.back()">Back</button>
 			
 		</form>
-	</fieldset>
+	</fieldset><br>
 	<section>
 		<table border="2">
 			<thead style="font-weight: bolder;">
 				<tr>
-				<td>S.No</td>
-				<td>Dhayi Names</td>
-				<td >options</td>
+				<th>S.No</th>
+				<th>Dhayi Names</th>
+				<th>option</th>
 			</tr>
-			<div id="fetch">Fetching...</div>
+			<div id="fetch" style="color:seagreen;font-weight: bolder;font-size: 21px;">Fetching Data...</div>
 			</thead>
 		<tbody id="tableBody">
 			
-		</tbody>
+		</tbody></table>
 	</section>
   </center>
   <script type="text/javascript" src="jummah.js"></script>
