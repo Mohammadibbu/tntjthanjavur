@@ -1,4 +1,5 @@
-  
+ 
+ 
 //inialize firebase
 
 const firebaseConfig = {
@@ -73,9 +74,8 @@ $('select').not(this).find('option[value="'+prevValue+'"]').removeAttr('disabled
   // dhayi names change HERE....
   
  
-
  // page preventDefault 
- document.getElementById("submitbtn").addEventListener("click",function(event){event.preventDefault()});
+ // document.getElementById("submitbtn").addEventListener("click",function(event){event.preventDefault()});
  // validate the form
  function validateloginpage() {
   let content_table=document.getElementById('content');
@@ -131,16 +131,22 @@ $('select').not(this).find('option[value="'+prevValue+'"]').removeAttr('disabled
         userName.style.outline= "2px solid green";
         pass_word.style.outline = "2px solid green";
         valid.style.display = "block";
-        document.getElementById('button1').style.display = "block";
+        document.getElementById('dhayilistbutton').style.display = "block";
          loginbtn.style.color ="white";
          loginbtn.style.background ="#29f013";
-          
-        
+  
         valid.style. animation = "shake 1s ease-in-out 0s 5";
         valid.focus();
         //alert("✳️👍Login Successfully👍✳️");
         //login success message
-       
+        function loginsuccess(){
+          loginbtn.style.color ="black";
+          loginbtn.style.background ="yellow";
+        content_table.style.display = "block" ;
+          btn_table.style.display = "block";
+          loginpage.style.display= "none";
+        }
+      setTimeout(loginsuccess,1500);
   }
   //unnecessary part
   else{
@@ -189,6 +195,35 @@ function printing(){
        setTimeout(()=>{session_expired.style.display = "block" ;},42000);
      }
    }
+//session timeout
+// onafterprint="session_expired()"
+// function session_expired() {
+//       // body...
+//       var btn_table=document.getElementById('button');
+//        var session_expired=document.getElementById('session');
+//        var timeleft=60;
+//        session_expired.style.display="block";
+//      var timeid=setInterval(countdown,1000);
+//  function countdown(){
+//   if (timeleft==0) {
+//     clearTimeout(timeid);
+//     session_expired.style.display="none";
+//     refresh();}
+//   else if(timeleft<=15){
+//     btn_table.style.display='none';
+//     session_expired.innerHTML='Your Session Expired in '+ timeleft + ' Seconds ! PLEASE RE-LOGIN🔄 ...';
+//     timeleft--;
+//   }
+
+//   else{
+    
+//     timeleft--;
+//   }
+//  }
+
+//}
+
+
    //on online
 function online(){
       // alert("🌐Back online...");
@@ -213,3 +248,6 @@ function online(){
     }
 
  
+ 
+
+    
