@@ -5,7 +5,6 @@
 <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
 <meta name="viewport" content="width=1024">
 <title>Jummah chart</title>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
 <!--  login page loading style -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- Check online or offline -->
@@ -21,6 +20,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Arima:wght@700&display=swap" rel="stylesheet">
 <!-- style for whole page -->
 	<link rel="stylesheet" type="text/css" href="loginpage.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
 </head>
 <body onoffline="offline()" ononline="online()">
  
@@ -49,7 +49,7 @@
 	<input type="checkbox" onclick="showpassword();" id="showpwd"><label id="showpwd">show password</label>
 	<div id="check_pwd">Please Enter a valid password !</div>
 	<br>
-	<button type="submit" name="submit" id="submitbtn" onclick="validate()" >Login</button>
+	<button type="submit" name="submit" id="submitbtn" onclick="validateloginpage()" >Login</button>
 </form>
 </div>
 <script type="text/javascript" src="script.js">
@@ -261,8 +261,7 @@
 
 <center>
 	<button id="button" onclick="printing();">DOWNLOAD PDF!</button>
-<button id="button1" onclick="window.open('Dhayilist.html','_self');">DHAYI LIST</button>
-
+	<button id="dhayilistbutton" onclick="window.open('dhayilist.html','_self');">DHAYIKAL LIST</button>
 </center>
 <br>
  <footer style="font-family: 'Tiro Tamil', serif;">
