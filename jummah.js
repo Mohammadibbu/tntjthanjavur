@@ -143,6 +143,4 @@ $(document).ready(function(){
                     $("nav ul").toggleClass("active")
             })
             })
-  function menu(){
-               document.getElementById('menu').innerHTML="X";
-}
+  
