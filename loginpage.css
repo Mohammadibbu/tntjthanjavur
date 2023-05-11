@@ -11,17 +11,14 @@
        
 			-webkit-print-color-adjust: exact !important;
 			background: white !important;
-			align-items: center;
-			justify-content: center;
-
                        /* min-width:960px;*/
                          
        
 		}
 
          .container{
-			position: absolute;
-			margin: 350px 270px 100px;
+			
+			margin: 350px 100px;
 			width: 485px;
 			height: 600px;
       background: #171713;
@@ -327,3 +324,6 @@
 -webkit-appearance: none !important;
 }
 		}
+
+
+
