@@ -51,7 +51,7 @@ else{
       }else{
         alert("_AUTHENTICATED SUCCESSFULLY_✔️")
        save(name,datetime);
-       setTimeout(()=>{alert("Added successfully....")},500);
+       setTimeout(()=>{alert("Added successfully....")},100);
 
        document.getElementById('added_message').style.display="block";
        setTimeout(()=>{document.getElementById('added_message').style.display = "none" ;},3000);
@@ -113,7 +113,7 @@ function removeData(key,uservalue){
       console.log()
        if (confirm("Do You Want To Delete?"+"\n"+uservalue)) {
          navigator.vibrate([50,100,50]);
-       setTimeout(()=>{alert("Deleted Successfully...")},500);
+       setTimeout(()=>{alert("Deleted Successfully...")},200);
 
          
           document.getElementById('delete_message').style.display="block";
