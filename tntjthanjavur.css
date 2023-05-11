@@ -9,13 +9,14 @@ table{
 	
 /*	font-weight: bolder;*/
 	border-collapse: collapse;
-      width: 90%;
+      width: 100%;
       background-color: lightgray ;
       text-align: center;
 
 }
 th{
   padding: 8px;
+  font-weight: bolder;
   background-color: palegoldenrod ;
 /*  color: darkolivegreen;*/
 
