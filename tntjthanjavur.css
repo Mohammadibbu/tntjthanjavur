@@ -31,9 +31,11 @@ th{
 tr:nth-child(even) {background-color: #f2f2f2;}
 span{
       color: red;
+
 }
 h3{
 /*  color: green;*/
+ font-weight: bolder;
 }
 fieldset{
       padding: 20px;
