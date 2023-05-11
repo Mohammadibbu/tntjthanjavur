@@ -137,9 +137,12 @@ $(window).on('scroll',function(){
                 $('nav').removeClass('black');
             }
         })
-  /*menu button onclick function*/         $(document).ready(function(){
+  /*menu button onclick function*/        
+$(document).ready(function(){
                 $('.menu h4').click(function(){
                     $("nav ul").toggleClass("active")
             })
             })
- 
+  function menu(){
+               document.getElementById('menu').innerHTML="X";
+}
