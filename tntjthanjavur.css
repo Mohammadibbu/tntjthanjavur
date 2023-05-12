@@ -1,9 +1,10 @@
 #myBtntop {
+ text-align:left
   display: none;
   position: fixed;
   bottom: 20px;
   right: 20px;
-  z-index: -99;
+  z-index: 99;
   font-size: 18px;
   border: none;
   outline: none;
