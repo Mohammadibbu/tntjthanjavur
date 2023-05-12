@@ -146,6 +146,7 @@ $('select').not(this).find('option[value="'+prevValue+'"]').removeAttr('disabled
           loginpage.style.display= "none";
         document.getElementById('dhayilistbutton').style.display = "block";
         document.getElementById('dhayilistlink').style.display = "block";
+        document.getElementById('navpdf').style.display = "block";
 
         }
       setTimeout(loginsuccess,1500);
@@ -251,4 +252,12 @@ function online(){
  
  
 
+ // feedback confirmation
+  function feedback(){
+       if (confirm("opening Gmail or Email")) {
+          document.getElementById('fb').href ="mailto:ithris615@yahoo.com";
+          navigator.vibrate([50,100,50]);
+          setTimeout(()=>{document.getElementById('fb').href ="#";},2000);
+        }else{document.getElementById('fb').href ="#";navigator.vibrate([100]);}
+}
     
