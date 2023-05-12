@@ -1,3 +1,6 @@
+html { 
+   scroll-behavior: smooth; 
+ }
 .opt{
     text-align:center;
 }
