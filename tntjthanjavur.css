@@ -150,6 +150,7 @@ h2{
   40% { transform: translate(5px, -8px) rotate(1deg); }
  
 }
+img{border-radius: 10px;}
 
 /*nav bar style*/
 
