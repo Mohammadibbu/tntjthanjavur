@@ -16,7 +16,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Tiro+Tamil:ital@1&display=swap" rel="stylesheet">
 
 <!-- <link href="https://fonts.googleapis.com/css2?family=Coiny&display=swap" rel="stylesheet"> -->
-<link rel="stylesheet" type="text/css" href="tntjthanjavur.css">
+<!-- <link rel="stylesheet" type="text/css" href="tntjthanjavur.css"> -->
 
 <link href="https://fonts.googleapis.com/css2?family=Arima:wght@700&display=swap" rel="stylesheet">
 <!-- style for whole page -->
@@ -27,13 +27,15 @@
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 	</head>
+
 <body onoffline="offline()" ononline="online()">
+	<noscript>You need to enable JavaScript to run this app.</noscript>
         <div class="responsive-bar">
         <div class="logo">
             <img src="tntjlogo.png" alt="logo"/>
             </div>
             <div class="menu">
-            <h4>Menu</h4>
+            <h4><i class="material-icons" style="font-size:48px;color:wheat;">menu</i></h4>
             </div>
         </div>
 		<nav>
@@ -41,12 +43,16 @@
             <img src="tntjlogo.png" alt="logo"/>
             </div>
          <ul>
+         	<hr>
             <li><a href="#content" >Home</a></li>
              <!-- <li><a href="#">About us</a></li> -->
-             <!-- <li><a href="#">Portfolio</a></li> -->
+       
+             <li><a href="#" id="navpdf" style="display:none;" onclick="printing();">Print has pdf</a></li>
              <li id="dhayilistlink" style="display:none;"><a href="Dhayilist.html" >Dhayikal List</a></li>
-             <li><a href="mailto:ithris615@yahoo.com" onclick="alert('Opening gmail or email')">Contact Us</a></li>
+             <li><a href="#" id="fb" onclick="feedback()">Contact Us</a></li><hr><br>
+               <li style="font-weight:bolder;color: goldenrod;">  ©️ Copyright 2022 TNTJ THANJAI SOUTH </li><br>
             </ul>
+
         </nav>
      
  
@@ -308,7 +314,7 @@
 <br>
  <footer style="font-family: 'Tiro Tamil', serif;">
 	<cite style="font-weight:bolder;">  ©️ Copyright 2022 TNTJ THANJAI SOUTH </cite>
-	<a class="change" href="mailto:ithris615@yahoo.com" title="send your feedback" onclick="alert('Opening G-Mail or E-Mail...')"><em style="font-weight: bolder;">feed back?</em></a>
+	<!-- <a class="change" href="mailto:ithris615@yahoo.com" title="send your feedback" onclick="alert('Opening G-Mail or E-Mail...')"><em style="font-weight: bolder;">feed back?</em></a> -->
 </footer> 
 </body>
 </html>
