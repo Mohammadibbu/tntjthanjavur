@@ -5,8 +5,10 @@
 	<title>add dhayi names</title>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
 	<link rel="stylesheet" type="text/css" href="tntjthanjavur.css">
+	<link rel="stylesheet" type="text/css" href="loginpage.css">
  <meta name="viewport" content="width=device-width,initial-scale=1, user-scalable=no">
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 	</head>
 <body onoffline="offline()" ononline="online()">
@@ -15,7 +17,7 @@
             <img src="tntjlogo.png" alt="logo"/>
             </div>
             <div class="menu">
-            <h4 >Menu</h4>
+            <h4><i class="material-icons" style="font-size:48px;color:wheat;">menu</i></h4>
             </div>
         </div>
 		<nav>
@@ -23,10 +25,13 @@
             <img src="tntjlogo.png" alt="logo"/>
             </div>
          <ul>
+         	<hr>
             <li><a href="index.html">Home</a></li>
              <li><a href="#form">Dhayikal list</a></li>
             
-             <li><a href="mailto:ithris615@yahoo.com" onclick="alert('Opening gmail or email')">Contact Us</a></li>
+             <li><a href="#" id="fb" onclick="feedback()">Contact Us</a></li>
+             <hr><br>
+               <li style="font-weight:bolder;color: goldenrod;">  ©️ Copyright 2022 TNTJ THANJAI SOUTH </li><br>
             </ul>
         </nav>
      
@@ -37,7 +42,7 @@
 	<div id="delete_message">Deleted successfully...</div>
 	<fieldset >
 		<form id="form">
-			<label>Add dhayi name  </label><input type="text" name="dhayi_name" list="dhayi_names"id="name">
+			<h2>Add dhayi name  </h2><input type="text" name="dhayi_name" list="dhayi_names"id="name">
 			<datalist id="dhayi_names">
 	<option value="அப்துல் அஜீஸ் - 9363437661">
 	<option value="அம்ஜத்கான் - 9715886738">
