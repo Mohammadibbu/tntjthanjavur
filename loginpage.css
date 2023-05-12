@@ -257,7 +257,7 @@
 		@media print{
 			 
 			@page{
-				size: a3;
+				size: a2;
 			}
 		table{
 			font-family: 'Tiro Tamil', serif !important;
@@ -275,7 +275,7 @@
 			font-size: 110% !important;
 
 		}
-
+		
 		#head {
 			font-family: 'Tiro Tamil', serif !important;
 			padding: 10px !important;
@@ -286,7 +286,7 @@
             
 		}
  
- 
+
 		#tntj{
 			color: white;
 		    font-family: 'Arima', cursive !important;
