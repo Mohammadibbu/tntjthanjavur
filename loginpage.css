@@ -189,7 +189,7 @@
 			border-collapse: collapse;
 		    font-weight: bolder;
                           background-color:white;
-			margin: 100px 50px 100px 50px;		
+			margin:100px 50px 100px 50px;		
 		}
 		td{
 			background-color: #ead5ab;
@@ -219,9 +219,9 @@
 			text-align: center;
 			padding: 10px 15px 1px;
 		}
-		/*img{
-			border-radius:20px;
-		}*/
+		img{
+			border-radius:10px;
+		}
 		select{
 			border: 1px solid #ead5ab;
 			background-color: #ead5ab;
