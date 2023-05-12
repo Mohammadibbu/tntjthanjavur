@@ -2,15 +2,15 @@
   display: none;
   position: fixed;
   bottom: 20px;
-  right: 30px;
-  z-index: 29;
+  right: 20px;
+  z-index: -99;
   font-size: 18px;
   border: none;
   outline: none;
   background-color: lightgreen;
   color: white;
   cursor: pointer;
-  opacity:.5;
+  opacity:.1;
   padding: 5px;
   border-radius: 4px;
 }
