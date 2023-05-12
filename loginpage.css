@@ -275,7 +275,7 @@
 			font-size: 110% !important;
 
 		}
-		
+
 		#head {
 			font-family: 'Tiro Tamil', serif !important;
 			padding: 10px !important;
@@ -286,7 +286,7 @@
             
 		}
  
-
+ 
 		#tntj{
 			color: white;
 		    font-family: 'Arima', cursive !important;
@@ -314,10 +314,10 @@
       margin-top: 0;
 		}
 
-			button,form,footer,#session,#online,#offline{
+			nav,button,form,footer,#session,#online,#offline{
 				display: none !important;
 			}
-                .container{
+                .container,.responsive-bar{
                        display: none !important;
                             }
 #date_style{
