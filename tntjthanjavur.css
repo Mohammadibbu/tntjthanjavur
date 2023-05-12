@@ -1,4 +1,6 @@
-
+html {
+  scroll-behavior: smooth;
+}
 body{
 	font-family: sans-serif;
 /*       background-image: linear-gradient(to right, green , white,black);*/
