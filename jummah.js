@@ -18,11 +18,12 @@ document.getElementById('form').addEventListener('submit',validate);
 
 document.getElementById("add").addEventListener("click",function(event){event.preventDefault()}); 
 const table=document.getElementById("tableBody");
+var datetime=new Date().toString(); 
 
  function validate() {
 
   // body...
-var datetime=new Date().toString();
+
 var name=document.getElementById('name');
 
 const save= (name,datetime)=>{
@@ -128,6 +129,7 @@ function removeData(key,uservalue){
         }
 
 }
+//nav bar responsive
 $(window).on('scroll',function(){
             if($(window).scrollTop()){
                 $('nav').addClass('black');
@@ -136,10 +138,17 @@ $(window).on('scroll',function(){
                 $('nav').removeClass('black');
             }
         })
-  /*menu button onclick function*/        
-$(document).ready(function(){
+  /*menu button onclick function*/         $(document).ready(function(){
                 $('.menu h4').click(function(){
                     $("nav ul").toggleClass("active")
             })
             })
-  
+
+ // feedback confirmation
+  function feedback(){
+       if (confirm("opening Gmail or Email")) {
+          document.getElementById('fb').href ="mailto:ithris615@yahoo.com";
+          navigator.vibrate([50,100,50]);
+          setTimeout(()=>{document.getElementById('fb').href ="#";},2000);
+        }else{document.getElementById('fb').href ="#";navigator.vibrate([100]);}
+}
