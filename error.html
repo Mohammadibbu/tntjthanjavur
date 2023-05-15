@@ -14,7 +14,8 @@
         console.log(browsername)
         if (platform.name==="Chrome Mobile"||platform.name==="Chrome"||platform.name==="Safari") {
             console.log("its chrome")
-            window.open('index.html','_self')
+            setTimeout(()=>{window.open('index.html','_self');},2000);
+            
 
                }else if( platform.name==="Samsung Internet"){
                 alert("please switch dark mode to light mode in your mobile settings,in dark mode this webpage doesn't work properly.")
