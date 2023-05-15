@@ -1,6 +1,21 @@
-html { 
-   scroll-behavior: smooth; 
- }
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: cyan;
+
+  border-radius: 5px;
+}
 .opt{
     text-align:center;
 }
@@ -11,7 +26,8 @@ html {
 }
 		
 		 body{
-       
+			font-family: 'Tiro Tamil', serif;
+            
 			-webkit-print-color-adjust: exact !important;
 			background: white !important;
                        /* min-width:960px;*/
@@ -122,7 +138,7 @@ html {
        	border-radius: 10px;
        	border: 2px solid #1e7d14;
        }
-#button,#dhayilistbutton{
+#button,#dhayilistbutton,#dwnld{
 	font-family: 'Arima', cursive;
   background-color: #4CAF50;
   border: 2px solid black;
@@ -132,6 +148,7 @@ html {
   font-size: 16px;
   margin: 10px 20px;
   border-radius: 20px;
+  cursor: pointer;
 }
 #button:hover{
     background-color:red;
@@ -372,8 +389,7 @@ nav > ul > li{
     display: inline-block;
 }
 nav > ul > li > a:hover{
-    background: #f00;
-    color: #fff;
+    background: blue;
 }
 nav > ul > li > a{
     color: #262626;
