@@ -3,20 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
     <title>Detect your Phone</title>
     <meta name="theme-color" content="#272c34"/>
     <script src=
 "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
     </script>
 </head>
-<body>
+<body onload="check()" id="body">
     <section>
     <div class="browser" >Browser: <span id="browser"></span></div>
     <div class="version" >Version: <span id="version"></span></div>
     <div class="layout" >Layout: <span id="layout"></span></div>
     <div class="os" >OS: <span id="os"></span></div>
-    <div class="description" >Description: <span id="description"></span></div>
+    <div class="description" >Description: <span id="description"></span>
+     </div>
+     <div>ip address  :<span id="gfg"></span></div>
+
      
      
       <script>
@@ -34,12 +37,6 @@
     })
     </script>
 
-<center>
-        
-        <h3>Public IP Address of user is:</h3>
-        <p id="gfg"></p>
- 
-    </center>
  </section>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/platform/1.3.6/platform.min.js"></script>
     <script>
@@ -48,6 +45,21 @@
      document.getElementById('layout').textContent = platform.layout;
      document.getElementById('os').textContent = platform.os;
      document.getElementById('description').textContent = platform.description;
+     function check(){
+        var browsername=platform.name;
+        console.log(browsername)
+        if (platform.name==="Chrome Mobile"||platform.name==="Chrome"||platform.name==="Chrome Mobile") {
+            console.log("its chrome")
+               }else if( platform.name==="Samsung Internet"){
+                alert("please use in light mode otherwise this website not working well")
+               }
+        else{
+             alert("please open this website in chrome or install chrome")
+             document.getElementById('body').style.display="none";
+
+        }
+     }
     </script>
+
 </body>
 </html>
