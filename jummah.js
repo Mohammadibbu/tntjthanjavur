@@ -200,7 +200,8 @@ $(window).on('scroll',function(){
                }
         else{
              // alert("please open this website in chrome or install chrome")
-             // document.getElementById('body').style.display="none";
+             
+            setTimeout(()=>{location.reload();},2000);
             window.open('error.html','_self')
 
         }
