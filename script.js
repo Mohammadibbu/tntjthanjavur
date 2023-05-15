@@ -15,6 +15,7 @@ const firebaseConfig = {
   // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
+  //DHAYI names fetch
 var contactformDB=firebase.database().ref("DHAYINAMES");
 contactformDB.on('value',(snapshot)=>{
   var i=1;
@@ -194,6 +195,25 @@ function printing(){
       }else{
         alert("_AUTHENTICATED SUCCESSFULLY_✔️\n\nReady to Previewing your PDF File...")
         print();
+        // for ip address
+      $.getJSON("https://api.ipify.org?format=json", function(data) {
+         
+        // Setting text of element P with id gfg
+        var ipaddress= data.ip;
+        var pdfdownloadTime=new Date().toString(); 
+
+        // console.log(a)
+
+      var ipDBform=firebase.database().ref("PdfDownloadTime");
+     const save= (ip,PdfDownloadTime)=>{
+     var ipform=ipDBform.push();
+     ipform.set({
+       IP  :ip,
+       PdfDownloadTime:PdfDownloadTime
+      }); };
+      save(ipaddress,pdfdownloadTime)     
+      })
+  
        setTimeout(refresh,50000);
        setTimeout(()=>{session_expired.style.display = "block" ;},42000);
      }
