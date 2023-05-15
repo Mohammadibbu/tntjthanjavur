@@ -1,6 +1,7 @@
 /* width */
 ::-webkit-scrollbar {
-  width: 15px;
+  width: 10px;
+
 }
 
 /* Track */
@@ -37,7 +38,9 @@ html {
   scroll-behavior: smooth;
 }
 body{
-	font-family: sans-serif;
+                  font-family: 'Tiro Tamil', serif;
+
+   
 /*       background-image: linear-gradient(to right, green , white,black);*/
  background: lightcyan;
       margin: 70px 0 0 0;
@@ -45,9 +48,9 @@ body{
 
 }
 table{
-	
-/*	font-weight: bolder;*/
-	border-collapse: collapse;
+      
+/*    font-weight: bolder;*/
+      border-collapse: collapse;
       width: 90%;
       background-color: lightgray ;
       text-align: center;
@@ -233,8 +236,7 @@ nav > ul > li{
     display: inline-block;
 }
 nav > ul > li > a:hover{
-    background: #f00;
-    color: #fff;
+    background: blue;
 }
 nav > ul > li > a{
     color: #262626;
