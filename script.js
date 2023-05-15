@@ -295,3 +295,20 @@ $(window).on('scroll',function(){
                     $("nav ul").toggleClass("active")
             })
             })
+
+
+  function check(){
+        var browsername=platform.name;
+        console.log(browsername)
+        if (platform.name==="Chrome Mobile"||platform.name==="Chrome"||platform.name==="Safari") {
+            console.log("its chrome")
+               }else if( platform.name==="Samsung Internet"){
+                alert("please switch dark mode to light mode in your mobile settings,in dark mode this webpage doesn't work properly.")
+               }
+        else{
+             // alert("please open this website in chrome or install chrome")
+             // document.getElementById('body').style.display="none";
+            window.open('error.html','_self')
+
+        }
+     }
