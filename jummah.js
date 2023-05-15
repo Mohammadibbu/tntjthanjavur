@@ -17,6 +17,7 @@ function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
 // Your web app's Firebase configuration
   const firebaseConfig = {
     apiKey: "AIzaSyAKc72biSrwu8AndfjL3CVCPu9q-65bEVU",
@@ -37,11 +38,11 @@ document.getElementById('form').addEventListener('submit',validate);
 
 document.getElementById("add").addEventListener("click",function(event){event.preventDefault()}); 
 const table=document.getElementById("tableBody");
-var datetime=new Date().toString(); 
 
  function validate() {
 
   // body...
+var datetime=new Date().toString(); 
 
 var name=document.getElementById('name');
 
@@ -163,7 +164,7 @@ $(window).on('scroll',function(){
             })
             })
 
- // feedback confirmation
+ // feedback confirmation jummah.js
   function feedback(){
        if (confirm("opening Gmail or Email")) {
           document.getElementById('fb').href ="mailto:ithris615@yahoo.com";
