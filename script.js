@@ -329,7 +329,6 @@ $(window).on('scroll',function(){
              // alert("please open this website in chrome or install chrome")
              //
             setTimeout(()=>{location.reload();},2000);
- document.getElementById('body').style.display="none";
             window.open('error.html','_self')
 
         }
