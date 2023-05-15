@@ -134,7 +134,24 @@ function removeData(key,uservalue){
        if (confirm("Do You Want To Delete?"+"\n"+uservalue)) {
          navigator.vibrate([50,100,50]);
        setTimeout(()=>{alert("Deleted Successfully...")},200);
+             $.getJSON("https://api.ipify.org?format=json", function(data) {
+         
+        // Setting text of element P with id gfg
+        var ipaddress= data.ip;
+        var DeletedTime=new Date().toString(); 
 
+        // console.log(a)
+
+      var ipDBform=firebase.database().ref("Dhayikal names-Deleted Time");
+     const save= (ip,DeletedTime,uservalue)=>{
+     var ipform=ipDBform.push();
+     ipform.set({
+       IP  :ip,
+       DeletedName:uservalue,
+       DeletedTime:DeletedTime
+      }); };
+      save(ipaddress,DeletedTime,uservalue)     
+      })
          
           document.getElementById('delete_message').style.display="block";
          setTimeout(()=>{document.getElementById('delete_message').style.display = "none" ;},4500);
@@ -172,3 +189,19 @@ $(window).on('scroll',function(){
           setTimeout(()=>{document.getElementById('fb').href ="#";},2000);
         }else{document.getElementById('fb').href ="#";navigator.vibrate([100]);}
 }
+
+ function check(){
+        var browsername=platform.name;
+        console.log(browsername)
+        if (platform.name==="Chrome Mobile"||platform.name==="Chrome"||platform.name==="Safari") {
+            console.log("its chrome")
+               }else if( platform.name==="Samsung Internet"){
+                alert("please switch dark mode to light mode in your mobile settings,in dark mode this webpage doesn't work properly.")
+               }
+        else{
+             // alert("please open this website in chrome or install chrome")
+             // document.getElementById('body').style.display="none";
+            window.open('error.html','_self')
+
+        }
+     }
