@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ERROR:(</title>
+	<!-- get browser name -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/platform/1.3.6/platform.min.js"></script>
+</head>
+<body onload="check()">
+	<script type="text/javascript">
+		function check(){
+        var browsername=platform.name;
+        console.log(browsername)
+        if (platform.name==="Chrome Mobile"||platform.name==="Chrome"||platform.name==="") {
+            console.log("its chrome")
+            window.open('index.html','_self')
+
+               }else if( platform.name==="Samsung Internet"){
+                alert("please use in light mode otherwise this website not working well")
+               }
+        else{
+             // alert("please open this website in chrome or install chrome")
+            
+
+        }
+     }
+	</script>
+	<h1 style="color: red;">Your Browser doesn't support This webpage.<br><i style="color: lightgrey;"> we recommended the chrome browser to Access this Webpage</i></h1>
+</body>
+</html>
