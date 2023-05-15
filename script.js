@@ -261,3 +261,37 @@ function online(){
         }else{document.getElementById('fb').href ="#";navigator.vibrate([100]);}
 }
     
+
+// function autoClick(){
+//         $("#dwnld").click();
+//       }
+//       $(document).ready(function(){
+//         var element = $("#content");
+
+//         $("#dwnld").on('click', function(){
+//            // document.getElementById('downloadsucc').style.display="block";
+//           // setTimeout(()=>{document.getElementById('downloadsucc').style.display="none";},5000);
+//           html2canvas(element, {
+//               onrendered: function(canvas) {
+//               var imageData = canvas.toDataURL("image/jpg");
+//               var newData = imageData.replace(/^data:image\/jpg/, "data:application/octet-stream");
+//              $("#dwnld").attr("download", "Jummah Chart").attr("href", newData);
+             
+//             }
+//           });
+//         });
+//       });
+
+$(window).on('scroll',function(){
+            if($(window).scrollTop()){
+                $('nav').addClass('black');
+            }
+            else{
+                $('nav').removeClass('black');
+            }
+        })
+  /*menu button onclick function*/         $(document).ready(function(){
+                $('.menu h4').click(function(){
+                    $("nav ul").toggleClass("active")
+            })
+            })
