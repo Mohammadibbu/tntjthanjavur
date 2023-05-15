@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Detect your Phone</title>
+    <meta name="theme-color" content="#272c34"/>
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+</head>
+<body>
+    <section>
+    <div class="browser" >Browser: <span id="browser"></span></div>
+    <div class="version" >Version: <span id="version"></span></div>
+    <div class="layout" >Layout: <span id="layout"></span></div>
+    <div class="os" >OS: <span id="os"></span></div>
+    <div class="description" >Description: <span id="description"></span></div>
+     
+     
+      <script>
+     
+    /* Add "https://api.ipify.org?format=json" statement
+               this will communicate with the ipify servers in
+               order to retrieve the IP address $.getJSON will
+               load JSON-encoded data from the server using a
+               GET HTTP request */
+                
+    $.getJSON("https://api.ipify.org?format=json", function(data) {
+         
+        // Setting text of element P with id gfg
+        $("#gfg").html(data.ip);
+    })
+    </script>
+
+<center>
+        
+        <h3>Public IP Address of user is:</h3>
+        <p id="gfg"></p>
+ 
+    </center>
+ </section>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/platform/1.3.6/platform.min.js"></script>
+    <script>
+     document.getElementById('browser').textContent = platform.name;
+     document.getElementById('version').textContent = platform.version;
+     document.getElementById('layout').textContent = platform.layout;
+     document.getElementById('os').textContent = platform.os;
+     document.getElementById('description').textContent = platform.description;
+    </script>
+</body>
+</html>
