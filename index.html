@@ -283,7 +283,8 @@
 			<th colspan="4" id="tntj" >தாஃயிக்கள் தொடர்பான தகவல்களுக்கு - 9944191505</th>
 		</tr>
 <tr>
-   <th colspan="4" style="background-color: #312542;"><img id="frame" src="jummah.jpg" alt="Jummah img" style="width:100%;height:135px;"></th>
+   <th colspan="4" style="background-color: #312542;"><img id="frame" src="" onerror="this.style.display='none'" style="width:100%;height:135px;">
+   	<input type="file" id="input-file" accept="image/*,capture=camera" onchange="preview()" onclick="alert(' Your image File \n Dimensions should be(1300x150)pixel  ');"></th>
  </tr>
 </tbody>
 	</table>
@@ -295,9 +296,12 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
 <center>
+	<input type="button" id="choose_different" style="display:none;" value="Choose Different file" onclick="diff_file()">
+
 	<button id="button" onclick="printing();">DOWNLOAD PDF!</button><br><br>
 	<!-- <button id="dhayilistbutton" onclick="window.open('Dhayilist.html','_self');">DHAYIKAL LIST</button> -->
-	<input type="file" id="input-file" accept="image/*,capture=camera" onchange="preview()" onclick="alert(' Your image File \n Dimensions should be(1300x150)pixel  ');">
+
+	
 </center>
 <br>
  <footer style="font-family: 'Tiro Tamil', serif;">
