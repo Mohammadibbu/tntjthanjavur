@@ -102,67 +102,53 @@ contactformDB.on('value',(snapshot)=>{
 // console.log(key)
   })
 })
-// function prompt1(){
-//       let text;
-//       let person=prompt("edit dhayi name :");
-//       if (person==null||person=="")
-//       {
-//         text="";
-        
-//         if (confirm("if u want to edit dhayi  Name 😢")) {
-//           prompt1();
-//         }else{
-//           alert("sorry, for the Trouble ! 🤞🤐");
-//         }
-        
-//       }else{
-//         text="Hello  "+ person +"! successfully edited";
-//         alert(text);
-//       }}
-//  function editData(key){
-//     prompt1();
-//     console.log()
-//    firebase.database().ref('DHAYINAMES/'+key).once('value',(snapshot)=>{
-//    name.value=snapshot.val().dhayiname;
 
-//  })
-//  return false;
-//  }
-// console.log(table)
+console.log(table)
+//remove data in firebase
+
 function removeData(key,uservalue){
-      console.log()
-       if (confirm("Do You Want To Delete?"+"\n"+uservalue)) {
-         navigator.vibrate([50,100,50]);
-       setTimeout(()=>{alert("Deleted Successfully...")},200);
-             $.getJSON("https://api.ipify.org?format=json", function(data) {
+      // console.log()
+       // if (confirm("Do You Want To Delete?"+"\n"+uservalue)) {
+        let pwd=prompt("Please Enter Password To Delete" +"\n"+uservalue);
+      //confirmation password
+      if (pwd!= "tntj"){
+        
+        if (confirm("ℹ️INCORRECT PASSWORD❗ \n Press 'OK' to TRY AGAIN 🔄...")) {
+          removeData(key,uservalue);
+        }else{
+          alert("If You Want To Delete\n"+uservalue+"\nPlease Enter The Correct Password...");
+        }
+      }else{
+        // alert("_AUTHENTICATED SUCCESSFULLY_✔️")
+        navigator.vibrate([50,100,50]);
+       setTimeout(()=>{alert("Deleted Successfully...")},250);
+
+        
+//     // for ipaddress   
+     //         $.getJSON("https://api.ipify.org?format=json", function(data) {
          
-        // Setting text of element P with id gfg
-        var ipaddress= data.ip;
-        var DeletedTime=new Date().toString(); 
+     //    // Setting text of element P with id gfg
+     //    var ipaddress= data.ip;
+     //    var DeletedTime=new Date().toString(); 
 
-        // console.log(a)
+     //    // console.log(a)
 
-      var ipDBform=firebase.database().ref("Dhayikal names-Deleted Time");
-     const save= (ip,DeletedTime,uservalue)=>{
-     var ipform=ipDBform.push();
-     ipform.set({
-       IP  :ip,
-       DeletedName:uservalue,
-       DeletedTime:DeletedTime
-      }); };
-      save(ipaddress,DeletedTime,uservalue)     
-      })
+     //  var ipDBform=firebase.database().ref("Dhayikal names-Deleted Time");
+     // const save= (ip,DeletedTime,uservalue)=>{
+     // var ipform=ipDBform.push();
+     // ipform.set({
+     //   IP  :ip,
+     //   DeletedName:uservalue,
+     //   DeletedTime:DeletedTime
+     //  }); };
+     //  save(ipaddress,DeletedTime,uservalue)     
+     //  })
          
           document.getElementById('delete_message').style.display="block";
          setTimeout(()=>{document.getElementById('delete_message').style.display = "none" ;},4500);
            firebase.database().ref('DHAYINAMES/'+key).remove();
            return false;
           
-        }else{
-          // else part
-       // console.log(table)
-
-
         }
 
 }
@@ -190,19 +176,23 @@ $(window).on('scroll',function(){
         }else{document.getElementById('fb').href ="#";navigator.vibrate([100]);}
 }
 
- function check(){
+
+//browser check
+ function checkBrowser(){
         var browsername=platform.name;
         console.log(browsername)
-        if (platform.name==="Chrome Mobile"||platform.name==="Chrome"||platform.name==="Safari") {
+        if (platform.name==="Chrome Mobile"||platform.name==="Chrome"||platform.name==="Microsoft Edge"||platform.name==="Opera Mobile"||platform.name==="") {
             console.log("its chrome")
                }else if( platform.name==="Samsung Internet"){
-                alert("please switch dark mode to light mode in your mobile settings,in dark mode this webpage doesn't work properly.")
+                    alert("SAMSUNG INTERNET BROWSER \n Please switch dark mode to light mode in your Browser Settings or mobile settings,in dark mode this webpage doesn't work properly.\nwe recommend the chrome browser to Access this Webpage :)")
+
+
                }
         else{
              // alert("please open this website in chrome or install chrome")
-            
             window.open('error.html','_self')
-            setTimeout(()=>{location.reload();},2000);
+
+             setTimeout(()=>{location.reload();},2000);
 
         }
      }
