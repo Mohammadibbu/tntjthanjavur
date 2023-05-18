@@ -30,7 +30,7 @@
         <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 	</head>
 
-<body onoffline="offline()" ononline="online()" onload="check()">
+<body onoffline="offline()" ononline="online()" onload="checkBrowser()">
 	<noscript>You need to enable JavaScript to run this app.</noscript>
         <div class="responsive-bar">
         <div class="logo">
@@ -283,10 +283,11 @@
 			<th colspan="4" id="tntj" >தாஃயிக்கள் தொடர்பான தகவல்களுக்கு - 9944191505</th>
 		</tr>
 <tr>
-   <th colspan="4" style="background-color: #312542;"><img src="jummah.jpg" alt="Jummah img" style="max-width:100%;height:auto;"></th>
+   <th colspan="4" style="background-color: #312542;"><img id="frame" src="jummah.jpg" alt="Jummah img" style="width:100%;height:135px;"></th>
  </tr>
 </tbody>
 	</table>
+
 </div>
 <!-- END OF THE TABLE -->
 <!-- options template -->
@@ -295,7 +296,8 @@
 
 <center>
 	<button id="button" onclick="printing();">DOWNLOAD PDF!</button>
-	<button id="dhayilistbutton" onclick="window.open('Dhayilist.html','_self');">DHAYIKAL LIST</button>
+	<!-- <button id="dhayilistbutton" onclick="window.open('Dhayilist.html','_self');">DHAYIKAL LIST</button> -->
+	<input type="file" id="input-file" accept="image/*,capture=camera" onchange="preview()">
 </center>
 <br>
  <footer style="font-family: 'Tiro Tamil', serif;">
