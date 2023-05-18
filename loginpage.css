@@ -138,7 +138,7 @@
        	border-radius: 10px;
        	border: 2px solid #1e7d14;
        }
-#button,#dhayilistbutton,#dwnld{
+#button,#choose_different,#dwnld{
 	font-family: 'Arima', cursive;
   background-color: #4CAF50;
   border: 2px solid black;
@@ -334,7 +334,7 @@
       margin-top: 0;
 		}
 
-			nav,button,form,footer,#session,#online,#offline,#input-file{
+			nav,button,form,footer,#session,#online,#offline,#input-file,#choose_different{
 				display: none !important;
 			}
                 .container,.responsive-bar{
