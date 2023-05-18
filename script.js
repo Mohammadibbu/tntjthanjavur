@@ -310,10 +310,17 @@ $(window).on('scroll',function(){
 
 
 function preview() {
-   
+    frame.style.display="block";
+    document.getElementById('input-file').style.display="none"
+    document.getElementById('choose_different').style.display="block"
     frame.src=URL.createObjectURL(event.target.files[0]);
-    url=frame.src
-    console.log(frame,url)
-    
-}
+ 
+  
 
+}
+function diff_file(){
+    frame.src="";
+    document.getElementById('input-file').style.display="block"
+    document.getElementById('choose_different').style.display="none"
+
+}
