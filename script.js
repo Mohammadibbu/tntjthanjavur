@@ -145,7 +145,7 @@ $('select').not(this).find('option[value="'+prevValue+'"]').removeAttr('disabled
         content_table.style.display = "block" ;
           btn_table.style.display = "block";
           loginpage.style.display= "none";
-        document.getElementById('dhayilistbutton').style.display = "block";
+        document.getElementById('input-file').style.display = "block";
         document.getElementById('dhayilistlink').style.display = "block";
         document.getElementById('navpdf').style.display = "block";
 
@@ -195,56 +195,29 @@ function printing(){
       }else{
         alert("_AUTHENTICATED SUCCESSFULLY_✔️\n\nReady to Previewing your PDF File...")
         print();
-        // for ip address
-      $.getJSON("https://api.ipify.org?format=json", function(data) {
+     //    // for ip address
+     //  $.getJSON("https://api.ipify.org?format=json", function(data) {
          
-        // Setting text of element P with id gfg
-        var ipaddress= data.ip;
-        var pdfdownloadTime=new Date().toString(); 
+     //    // Setting text of element P with id gfg
+     //    var ipaddress= data.ip;
+     //    var pdfdownloadTime=new Date().toString(); 
 
-        // console.log(a)
+     //    // console.log(a)
 
-      var ipDBform=firebase.database().ref("PdfDownloadTime");
-     const save= (ip,PdfDownloadTime)=>{
-     var ipform=ipDBform.push();
-     ipform.set({
-       IP  :ip,
-       PdfDownloadTime:PdfDownloadTime
-      }); };
-      save(ipaddress,pdfdownloadTime)     
-      })
-  
+     //  var ipDBform=firebase.database().ref("PdfDownloadTime");
+     // const save= (ip,PdfDownloadTime)=>{
+     // var ipform=ipDBform.push();
+     // ipform.set({
+     //   IP  :ip,
+     //   PdfDownloadTime:PdfDownloadTime
+     //  }); };
+     //  save(ipaddress,pdfdownloadTime)     
+     //  })
        setTimeout(refresh,50000);
        setTimeout(()=>{session_expired.style.display = "block" ;},42000);
      }
    }
-//session timeout
-// onafterprint="session_expired()"
-// function session_expired() {
-//       // body...
-//       var btn_table=document.getElementById('button');
-//        var session_expired=document.getElementById('session');
-//        var timeleft=60;
-//        session_expired.style.display="block";
-//      var timeid=setInterval(countdown,1000);
-//  function countdown(){
-//   if (timeleft==0) {
-//     clearTimeout(timeid);
-//     session_expired.style.display="none";
-//     refresh();}
-//   else if(timeleft<=15){
-//     btn_table.style.display='none';
-//     session_expired.innerHTML='Your Session Expired in '+ timeleft + ' Seconds ! PLEASE RE-LOGIN🔄 ...';
-//     timeleft--;
-//   }
 
-//   else{
-    
-//     timeleft--;
-//   }
-//  }
-
-//}
 
 
    //on online
@@ -274,7 +247,7 @@ function online(){
 
  // feedback confirmation
   function feedback(){
-       if (confirm("opening Gmail or Email")) {
+       if (confirm("Opening Gmail or Email")) {
           document.getElementById('fb').href ="mailto:ithris615@yahoo.com";
           navigator.vibrate([50,100,50]);
           setTimeout(()=>{document.getElementById('fb').href ="#";},2000);
@@ -317,19 +290,30 @@ $(window).on('scroll',function(){
             })
 
 
-  function check(){
+  function checkBrowser(){
         var browsername=platform.name;
         console.log(browsername)
-        if (platform.name==="Chrome Mobile"||platform.name==="Chrome"||platform.name==="Safari") {
+        if (platform.name==="Chrome Mobile"||platform.name==="Chrome"||platform.name==="Microsoft Edge"||platform.name==="Opera Mobile"||platform.name==="") {
             console.log("its chrome")
                }else if( platform.name==="Samsung Internet"){
-                alert("please switch dark mode to light mode in your mobile settings,in dark mode this webpage doesn't work properly.")
+                           alert("SAMSUNG INTERNET BROWSER \n Please switch dark mode to light mode in your Browser Settings or mobile settings,in dark mode this webpage doesn't work properly.\nwe recommend the chrome browser to Access this Webpage :)")
+
                }
         else{
              // alert("please open this website in chrome or install chrome")
-             //
-            setTimeout(()=>{location.reload();},2000);
+             // document.getElementById('body').style.display="none";
             window.open('error.html','_self')
+             setTimeout(()=>{location.reload();},2000);
 
         }
      }
+
+
+function preview() {
+   
+    frame.src=URL.createObjectURL(event.target.files[0]);
+    url=frame.src
+    console.log(frame,url)
+    
+}
+
