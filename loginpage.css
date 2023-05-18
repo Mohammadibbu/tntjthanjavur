@@ -200,7 +200,7 @@
 
 /*hide the content*/
 
-#content,#button,#dhayilistbutton{
+#content,#button,#input-file{
   
   display: none;
  }
@@ -334,7 +334,7 @@
       margin-top: 0;
 		}
 
-			nav,button,form,footer,#session,#online,#offline{
+			nav,button,form,footer,#session,#online,#offline,#input-file{
 				display: none !important;
 			}
                 .container,.responsive-bar{
@@ -480,4 +480,24 @@ nav.black > ul > li > a{
     .active{
         display: block;
     }
+}
+
+#input-file{
+    background-color: #f8f9fc;
+    border: 1px solid #e2e9f3;
+    border-radius: 4px;
+    height: 40px;
+    width: 300px;
+    color: #565A90;
+}
+#input-file::file-selector-button{
+    border: none;
+    border-radius: 4px;
+    color: white;
+    background-color: #595ef1bd;
+    border: 1px solid #595ef1bd;
+    height: 40px;
+    cursor: pointer;
+    transition: all .25s ease-in;
+    cursor: pointer;
 }
