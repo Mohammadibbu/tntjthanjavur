@@ -40,7 +40,7 @@ $('select').not(this).find('option[value="'+prevValue+'"]').removeAttr('disabled
 });
 });
     var dhayi_names=`<select>
-    <option >NIL</option>
+    <option class=opt >NIL</option>
      <optgroup label="---தாஃயிக்களின் பெயர்கள்---">
     ${optionsfirebase}</optgroup></select>`
     // console.log(optionsfirebase)
