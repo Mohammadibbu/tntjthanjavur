@@ -204,6 +204,7 @@
   
   display: none;
  }
+		
 		table{
 			font-family: 'Tiro Tamil', serif;
 			border-collapse: collapse;
@@ -385,6 +386,9 @@ nav > ul{
     float: right;
 }
 nav > ul > li{
+	padding-bottom: 10px;
+	font-size: 20px;
+    
     list-style: none;
     display: inline-block;
 }
