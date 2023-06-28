@@ -123,14 +123,22 @@ button{
       border: 1.6px solid black;
 }
 input[type=text]{
-      padding: 5px;
-      border-radius: 3px;
+      padding: 10px;
+      border-radius: 5px;
      border: 2px solid deepskyblue;
      
 
       
 
 }
+datalist{
+  -webkit-appearance: none;
+   outline: none;
+   border: none;
+
+}
+
+
 input[type=text]:focus {
       outline: none;
     box-shadow: 0 0 2px 2px seagreen;
