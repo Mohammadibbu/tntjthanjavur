@@ -126,20 +126,16 @@ input[type=text]{
       padding: 10px;
       border-radius: 5px;
      border: 2px solid deepskyblue;
-     
+     -webkit-appearance: none;
+   outline: none;
+ 
 
       
 
 }
-datalist{
-  -webkit-appearance: none;
-   outline: none;
-   border: none;
-
-}
-
 
 input[type=text]:focus {
+       -webkit-appearance: none;
       outline: none;
     box-shadow: 0 0 2px 2px seagreen;
 
