@@ -56,20 +56,20 @@ const save= (name,datetime)=>{
 if(name.value===""){
   alert("Please Enter Dhayi Name")}
 else{
-
- let pwd=prompt("Please Enter Password To Add dhayiName");
+//recently changed...................................
+ let pwd=prompt("Please Enter Password To Add \n"+name.value);
       //confirmation password
       if (pwd!= "tntj"){
         
         if (confirm("ℹ️INCORRECT PASSWORD❗  \n Press 'OK' to TRY AGAIN 🔄...")) {
           validate();
         }else{
-          alert("If You Want To Add dhayiname,Please Enter The Correct Password...");
+          alert("If You Want To Add "+name.value+"\nPlease Enter The Correct Password...");
           name.value='';
         }
         
       }else{
-        alert("_AUTHENTICATED SUCCESSFULLY_✔️")
+        // alert("_AUTHENTICATED SUCCESSFULLY_✔️")
        save(name,datetime);
        setTimeout(()=>{alert("Added successfully....")},100);
 
