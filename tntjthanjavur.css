@@ -17,7 +17,7 @@
 }
 
 #myBtntop {
- text-align:left
+ text-align:left;
   display: none;
   position: fixed;
   bottom: 20px;
@@ -123,22 +123,19 @@ button{
       border: 1.6px solid black;
 }
 input[type=text]{
-      padding: 20px;
+      padding: 10px;
       border-radius: 5px;
      border: 2px solid deepskyblue;
-     -webkit-appearance: none;
-   outline: none;
- 
-
-      
+    
+    
 
 }
 
 input[type=text]:focus {
-       -webkit-appearance: none;
+      
       outline: none;
     box-shadow: 0 0 2px 2px seagreen;
-
+     
       border-radius: 10px;
       transition-duration: .9s;
   border: 2px solid lightcoral;
