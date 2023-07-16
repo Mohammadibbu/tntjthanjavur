@@ -295,6 +295,9 @@
 			height: auto;
 		
 		  }
+             body{
+		     background-color:pink;
+	     }
 		td,th{
 			font-family: 'Tiro Tamil', serif !important;
 			border: 2px solid black;
