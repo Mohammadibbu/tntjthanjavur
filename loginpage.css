@@ -296,7 +296,7 @@
 		
 		  }
              body{
-		     background-color:pink;
+		     background-color:pink !important;
 	     }
 		td,th{
 			font-family: 'Tiro Tamil', serif !important;
